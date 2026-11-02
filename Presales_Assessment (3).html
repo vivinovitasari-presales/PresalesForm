@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Presales Assessment</title><style>body{margin:0;padding:24px;background:#fff}#ps-request{max-width:1050px;margin:auto}
+#ps-request{font:14px/1.5 system-ui;color:light-dark(#273044,#e7ebf3);background:light-dark(#fff,#202633);border:1px solid light-dark(#dde2ec,#465164);border-radius:14px;overflow:hidden;color-scheme:light}#ps-request *{box-sizing:border-box}#ps-request header{padding:22px 26px;border-bottom:1px solid light-dark(#dde2ec,#465164)}#ps-request h2{font-size:23px;margin:0 0 5px;font-weight:600}#ps-request .sub{color:light-dark(#626c7e,#b4bfd1);font-size:12px}#ps-request nav{display:flex;gap:8px;padding:16px 26px 0;flex-wrap:wrap}#ps-request button{font:inherit;border:1px solid light-dark(#bac4d5,#66758b);border-radius:8px;padding:9px 15px;background:light-dark(#fff,#293244);color:inherit}#ps-request button[aria-pressed=true],#ps-request .primary{background:light-dark(#158c80,#4dd0bb);color:light-dark(#fff,#122c28);border-color:transparent}#ps-request .pane{padding:20px 26px}#ps-request .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}#ps-request label{display:block;font-weight:500}#ps-request input:not([type=checkbox]),#ps-request select,#ps-request textarea{display:block;width:100%;min-width:0;font:inherit;padding:10px;border:1px solid light-dark(#b9c3d8,#66758b);border-radius:6px;margin-top:6px;background:light-dark(#fff,#252e3e);color:inherit}#ps-request textarea{min-height:76px;resize:vertical}#ps-request h3{font-size:16px;font-weight:600;margin:23px 0 12px}#ps-request .checks{display:flex;gap:16px;flex-wrap:wrap}#ps-request .checks label{display:flex;align-items:center;gap:7px}#ps-request input[type=checkbox]{accent-color:#159b89;width:17px;height:17px}#ps-request .section{padding:15px 0;border-bottom:1px solid light-dark(#e2e7ef,#465164)}#ps-request .section h3{margin:0 0 10px}#ps-request .note{padding:10px 12px;background:light-dark(#edf8f5,#263e3c);border-radius:6px;margin:14px 0}#ps-request .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}#ps-request [hidden]{display:none!important}#ps-request .full{grid-column:1/-1}#ps-request .record{padding:12px 0;border-bottom:1px solid light-dark(#e2e7ef,#465164)}@media(max-width:520px){#ps-request .grid{grid-template-columns:1fr}#ps-request header,#ps-request .pane{padding:18px}#ps-request nav{padding:15px 18px 0}}
+body{background:#fff!important}#ps-request{background:#fff;color-scheme:light}
+</style></head><body><div id="ps-request"><header><h2>Presales Assessment</h2><div class="sub">Interactive mockup • Not connected to Zoho</div></header><div class="pane" id="ps-assessment">
+<div class="sub">Create Custom Assessment • Tipsea Turtle • PS-2026-001</div>
+<h3>Administrative Requirements</h3>
+<div class="grid">
+<label>Status<select><option>A. Leads Request</option><option>B. Requirement Gathering</option><option>C. Product Assessment</option><option>D. Internal Meeting</option><option>E. Client Evaluation</option><option>F. POC</option><option>G. In Pipeline</option></select></label>
+<label>Client Status *<select><option value="">-None-</option><option>New Client</option><option>Existing Client</option></select></label>
+<label>Product *<select id="ps-admin-product" required><option>HRIS</option><option>Customer Management &amp; Omnichannel</option><option>Accounting, Finance, and ERP</option><option>Expense</option><option>Commerce</option><option>Tax</option><option>Custom Application &amp; Custom Workflow</option><option>Digital E-Sign &amp; e-Materai</option><option>Other</option></select></label>
+<label>Request Date *<input type="date"></label>
+<label>Requester Team *<input id="ps-admin-team" value="Enterprise Sales B" readonly></label>
+<label>Expected Timeline *<input type="date"></label>
+<label>Deal Breaker *<select><option value="">-None-</option><option>Yes</option><option>No</option><option>To be confirmed</option></select></label>
+<label>Type of Custom *<select id="ps-custom-type"><option value="officeless">Officeless</option><option value="core">Core Product</option></select></label>
+<label>Tender<select id="ps-admin-tender"><option value="tender">Yes Tender</option><option value="non" selected>No Tender</option></select></label>
+<label>Priority Reason<input placeholder="Reason for prioritization"></label>
+<label>Published Date<input type="date"></label>
+<label>Request Details *<textarea placeholder="Customization requirements to assess"></textarea></label>
+<label>Request Template<select id="ps-template"><option value="assessment">Customization Assessment & Preliminary Estimate</option><option value="cr">Custom Request (CR)</option></select></label>
+<label>Technical Meeting Date<input type="date"></label>
+<label>CR Document Date<input id="ps-cr-date" type="date" disabled><span class="sub" id="ps-cr-hint">Enter once the CR document has been created.</span></label>
+</div>
+<h3>Gap & customization assessment</h3>
+<div class="grid"><label>PA ID<input value="PA-001" readonly></label><label>Gap source *<select id="ps-gap-source" required><option value="">Select gap source</option><option>RFI</option><option>Meeting</option><option>BRD / requirement list</option><option>POC</option><option>Reproduction</option></select></label><label>Item reference<input placeholder="RFI item number / Page / Meeting minutes"></label><label>Requirements completeness<select id="ps-detail"><option value="high">High-level / Details pending</option><option value="detail">Detailed and validated</option></select></label><label class="full">Gap summary<textarea placeholder="Gap between client requirements and standard capabilities"></textarea></label></div>
+<div id="ps-route" class="note">Path: Customization Assessment & Preliminary Estimate • CR not yet created.</div>
+<div class="grid"><label class="full">Solution / Estimation scope<textarea placeholder="Proposed solution used as the basis for the estimate"></textarea></label><label class="full">Assumptions, limitations & Open questions<textarea placeholder="Explicit assumptions for incomplete requirements"></textarea></label></div>
+<h3>Supporting Document</h3>
+<div class="grid"><label class="full">Document Link<input id="ps-document-link" type="url" placeholder="https://…"></label></div>
+<h3>Module Gap Details</h3>
+<div style="overflow-x:auto"><table id="ps-gap-table" style="width:100%;min-width:650px;border-collapse:collapse;text-align:left"><thead><tr><th scope="col" style="width:24%;padding:10px">Module</th><th scope="col" style="width:35%;padding:10px">Gap Detail</th><th scope="col" style="width:31%;padding:10px">Additional Notes</th><th scope="col" style="padding:10px">Action</th></tr></thead><tbody id="ps-gap-rows"></tbody></table></div>
+<div class="actions"><button type="button" id="ps-add-gap">+ Add Row</button></div>
+<div class="actions"><button type="button" id="ps-assessment-save" class="primary">Save assessment</button></div><div class="note" id="ps-assessment-message" hidden aria-live="polite"></div>
+</div>
+</div>
+<script>(()=>{const root=document.getElementById('ps-request');const get=id=>root.querySelector('#ps-'+id);
+function route(){const high=get('detail').value==='high';get('template').querySelector('[value="cr"]').disabled=high;if(high)get('template').value='assessment';const cr=get('template').value==='cr';get('cr-date').disabled=!cr;get('cr-hint').textContent=cr?'Enter once the CR document has been created.':'Not required for the preliminary assessment.';get('route').textContent=cr?'Path: CR preparation → Detailed estimate → Scope approval.':'Path: Customization Assessment & Preliminary Estimate • CR not yet created.'}get('detail').addEventListener('change',route);get('template').addEventListener('change',route);route();
+let gapRowNumber=0;
+function addGapRow(){
+ const row=document.createElement('tr');gapRowNumber++;
+ ['Module','Gap Detail','Additional Notes'].forEach((name,index)=>{const cell=document.createElement('td');cell.style.cssText='padding:8px;vertical-align:top;border-top:1px solid #dde2ec';const field=document.createElement(index===0?'input':'textarea');if(index===0)field.type='text';field.placeholder=index===0?'Enter module':index===1?'Describe the gap':'Enter additional notes';field.setAttribute('aria-label',name+' row '+gapRowNumber);cell.appendChild(field);row.appendChild(cell)});
+ const cell=document.createElement('td');cell.style.cssText='padding:8px;vertical-align:top;border-top:1px solid #dde2ec';const remove=document.createElement('button');remove.type='button';remove.textContent='Remove';remove.setAttribute('aria-label','Remove gap row '+gapRowNumber);remove.addEventListener('click',()=>row.remove());cell.appendChild(remove);row.appendChild(cell);get('gap-rows').appendChild(row);
+}
+get('add-gap').addEventListener('click',addGapRow);addGapRow();
+get('assessment-save').addEventListener('click',()=>{get('assessment-message').hidden=true;for(const field of get('assessment').querySelectorAll('input,select,textarea')){if(!field.disabled&&!field.reportValidity())return;}get('assessment-message').hidden=false;get('assessment-message').textContent='Assessment preview: '+get('custom-type').selectedOptions[0].textContent+'. Data has not been saved to Zoho.'});
+})();</script></body></html>
